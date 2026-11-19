@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:agent_user",
+ "creation": "2026-10-06 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+  "field_order": [
+   "agent_user",
+   "modules_section",
+   "enable_leads",
+   "enable_tasks",
+   "enable_deals",
+   "enable_call_logs",
+   "enable_contacts",
+   "enable_organizations",
+   "scope_section",
+   "view_all_leads",
+   "view_all_tasks",
+   "view_all_deals",
+   "view_all_call_logs",
+   "view_all_contacts",
+   "view_all_organizations"
+  ],
+ "fields": [
+  {
+   "fieldname": "agent_user",
+   "fieldtype": "Link",
+   "label": "Agent (User)",
+   "options": "User",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "One row per Agent user. Admins do not need a row (full access)."
+  },
+  {
+   "fieldname": "modules_section",
+   "fieldtype": "Section Break",
+   "label": "Module Access (Admin controlled)"
+  },
+  {
+   "fieldname": "enable_leads",
+   "fieldtype": "Check",
+   "label": "Leads",
+   "default": 1,
+   "description": "Agent can view/update assigned Leads."
+  },
+  {
+   "fieldname": "enable_tasks",
+   "fieldtype": "Check",
+   "label": "Tasks",
+   "default": 1,
+   "description": "Agent can view/update assigned Tasks."
+  },
+  {
+   "fieldname": "enable_deals",
+   "fieldtype": "Check",
+   "label": "Deals",
+   "default": 1,
+   "description": "Agent can view/update assigned Deals."
+  },
+  {
+   "fieldname": "enable_call_logs",
+   "fieldtype": "Check",
+   "label": "Call Logs",
+   "default": 1,
+   "description": "Agent can view/update assigned Call Logs."
+  },
+  {
+   "fieldname": "enable_contacts",
+   "fieldtype": "Check",
+   "label": "Contacts",
+   "default": 1,
+   "description": "Agent can view/update assigned Contacts."
+  },
+  {
+   "fieldname": "enable_organizations",
+   "fieldtype": "Check",
+   "label": "Organization",
+   "default": 1,
+   "description": "Agent can view/update assigned Organizations."
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Record Scope"
+  },
+  {
+   "fieldname": "view_all_leads",
+   "fieldtype": "Check",
+   "label": "View All Leads",
+   "default": 0,
+   "description": "Kept for compatibility. Leads visibility is view-permission only: every agent with Leads enabled sees all leads."
+  },
+  {
+   "fieldname": "view_all_tasks",
+   "fieldtype": "Check",
+   "label": "View All Tasks",
+   "default": 0,
+   "description": "When off, the Agent sees only Tasks they created."
+  },
+  {
+   "fieldname": "view_all_deals",
+   "fieldtype": "Check",
+   "label": "View All Deals",
+   "default": 0,
+   "description": "When off, the Agent sees only Deals assigned to them (deal_owner/owner)."
+  },
+  {
+   "fieldname": "view_all_call_logs",
+   "fieldtype": "Check",
+   "label": "View All Call Logs",
+   "default": 0,
+   "description": "When off, the Agent sees only their own Call Logs (caller/receiver/owner)."
+  },
+  {
+   "fieldname": "view_all_contacts",
+   "fieldtype": "Check",
+   "label": "View All Contacts",
+   "default": 0,
+   "description": "When off, the Agent sees only Contacts they created."
+  },
+  {
+   "fieldname": "view_all_organizations",
+   "fieldtype": "Check",
+   "label": "View All Organizations",
+   "default": 0,
+   "description": "When off, the Agent sees only Organizations they created."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "module": "Cold Call Custom",
+ "name": "Agent Module Access",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Cold Call Agent",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

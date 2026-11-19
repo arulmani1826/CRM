@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-10-04 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_name",
+  "column_break_service",
+  "description",
+  "section_break_amount",
+  "budget",
+  "column_break_time",
+  "timeline"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Select",
+   "label": "Service",
+   "options": "Website Development\nE-commerce Website\nPayment Gateway\nAdmin Dashboard\nMobile App Development\nCustom Software\nDigital Marketing\nIT Services\nMaintenance & Support\nOther",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Clean dropdown layout for the Service column (scope 3)."
+  },
+  {
+   "fieldname": "column_break_service",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "in_list_view": 1,
+   "description": "Adjacent text column: document the specific client need for the selected service."
+  },
+  {
+   "fieldname": "section_break_amount",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "budget",
+   "fieldtype": "Currency",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "column_break_time",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timeline",
+   "fieldtype": "Data",
+   "label": "Timeline",
+   "description": "e.g. 3 Months"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "module": "Cold Call Custom",
+ "name": "Cold Call Service Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
